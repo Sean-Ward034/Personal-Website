@@ -17,7 +17,7 @@
                 linear-gradient(45deg, #FF8200 25%, transparent 25%, transparent 75%, #FF8200 75%, #FF8200);
             background-size: 40px 40px;
             background-position: 0 0, 20px 20px;
-			font-size: 2em; /* This makes all text twice as large */
+            font-size: 1em;
         }
 
         header {
@@ -29,42 +29,46 @@
 
         header h1 {
             margin: 0;
-            font-size: 3em;
+            font-size: 2.5em;
         }
-		
-		header img {
+
+        header img {
             width: 50px;
             height: auto;
         }
 
         .container {
-            width: 80%;
+            width: 100%;
+            max-width: 80%;
             margin: auto;
             overflow: hidden;
             padding: 20px;
-            background-color: #58595B; /* Smokey Grey */
-            color: #fff; /* Makes the text stand out on the grey background */
+            background-color: #58595B;
+            color: #fff;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
 
         img {
-            width: 600px;
+            width: 100%;
+            max-width: 600px;
             height: auto;
             display: block;
             margin: 20px auto;
         }
-		
-		.image-row {
-			display: flex;
-			justify-content: space-around; /* Space images evenly */
-			align-items: center; /* Vertically center the images */
-			margin-top: 20px;
-		}
 
-		.image-row img {
-			width: 400px; /* Control the width of each image */
-			height: auto;
-		}
+        .image-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .image-row img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+        }
 
         .content {
             text-align: center;
@@ -95,7 +99,7 @@
             padding: 20px;
             margin-top: 60px;
         }
-		
+
         footer p {
             margin: 0;
             font-size: 1.5em;
@@ -104,12 +108,15 @@
         .social-links {
             margin-top: 20px;
             font-size: 1.2em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .social-links a {
             color: #fff;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 10px 15px;
             display: inline-flex;
             align-items: center;
         }
@@ -118,6 +125,54 @@
             width: 30px;
             height: 30px;
             margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 1.2em;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .content h2 {
+                font-size: 1.5em;
+            }
+
+            .image-row img {
+                max-width: 100%;
+            }
+
+            footer p {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            .image-row {
+                flex-direction: column;
+            }
+
+            .social-links {
+                font-size: 1em;
+            }
+
+            footer p {
+                font-size: 1em;
+            }
+
+            body {
+                background: none;
+            }
         }
     </style>
 </head>
@@ -130,19 +185,20 @@
 
     <div class="container">
         <div class="content">
-			<div class="image-row">
-				<img src="images/Pelli.png">
-				<img src="images/profile_picture.jpeg" alt="Profile Picture of Sean Ward">
-				<img src="images/smokey.png">
-			</div>
-			
+            <div class="image-row">
+                <img src="images/Pelli.png">
+                <img src="images/profile_picture.jpeg" alt="Profile Picture of Sean Ward">
+                <img src="images/smokey.png">
+            </div>
+
             <h2>About Me</h2>
-            <p>My name is Sean Ward, I am pursuing a BS in Computer Science at the University of Tennessee with a focus in Artificial Intelligence. I proudly graduated from Pellissippe State Community College with an AS in Engineering</p>
-			<div class="image-row">
-				<img src="images/ai_focus.jpeg">
-				<img src="images/OCV.png">
-				<img src="images/vidi.jpg">
-			</div>
+            <p>My name is Sean Ward, I am pursuing a BS in Computer Science at the University of Tennessee with a focus in Artificial Intelligence. I proudly graduated from Pellissippe State Community College with an AS in Engineering.</p>
+
+            <div class="image-row">
+                <img src="images/ai_focus.jpeg">
+                <img src="images/OCV.png">
+                <img src="images/vidi.jpg">
+            </div>
 
             <p>I have two years of experience as a Computer Vision Algorithm Engineer/Intern. I currently work at Solvis, Inc.</p>
             <img src="images/computer_vision.jpeg" alt="Computer Vision Work">
@@ -152,17 +208,17 @@
 
             <p>My strongest languages are Python and C++, but I am also proficient in C and am currently getting work experience with the COGNEX Machine Vision suite.</p>
             <div class="image-row">
-				<img src="images/cpp.jpeg" alt="C++">
-				<img src="images/Python.svg.png" alt="Python">
-				<img src="images/Csharp.svg" alt="C#">
-				<img src="images/cog.png" alt="COGNEX Suite">
-			</div>
+                <img src="images/cpp.jpeg" alt="C++">
+                <img src="images/Python.svg.png" alt="Python">
+                <img src="images/Csharp.svg" alt="C#">
+                <img src="images/cog.png" alt="COGNEX Suite">
+            </div>
 
             <p>I love UT sports, fishing, working out, and spoiling my golden doodle fur babies.</p>
-			<div class="image-row">
-				<img src="images/hobbies.jpeg" alt="Hobbies and Interests">
-				<img src="images/doggos.jpeg" alt="Fur Babies">
-			</div>
+            <div class="image-row">
+                <img src="images/hobbies.jpeg" alt="Hobbies and Interests">
+                <img src="images/doggos.jpeg" alt="Fur Babies">
+            </div>
         </div>
 
         <div class="skills">
