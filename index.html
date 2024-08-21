@@ -32,7 +32,7 @@
             font-size: 3em;
         }
 		
-	header img {
+		header img {
             width: 50px;
             height: auto;
         }
@@ -48,22 +48,23 @@
         }
 
         img {
-            width: 400px;
+            width: 600px;
             height: auto;
             display: block;
             margin: 20px auto;
         }
 		
-	.image-row {
-    		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    		gap: 20px;
-	}
+		.image-row {
+			display: flex;
+			justify-content: space-around; /* Space images evenly */
+			align-items: center; /* Vertically center the images */
+			margin-top: 20px;
+		}
 
-	.image-row img {
-		width: 400px; /* Control the width of each image */
-		height: auto;
-	}
+		.image-row img {
+			width: 400px; /* Control the width of each image */
+			height: auto;
+		}
 
         .content {
             text-align: center;
